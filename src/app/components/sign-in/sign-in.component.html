@@ -1,0 +1,55 @@
+<div class="flow-container">
+  <div class="row h-100 m-0">
+    <div class="form-wrapper">
+      <div class="form-group text-center mb-5">
+        <h3>Chat App</h3>
+      </div>
+      <div class="form-group w-100 d-inline-block">
+        <div class="picker-item w-50 text-center d-inline-block" (click)="changeForm(1)"
+          [ngClass]="{'active': isSignInActive === 1}">
+          Login
+        </div>
+        <div class="picker-item w-50 text-center d-inline-block" (click)="changeForm(0)"
+          [ngClass]="{'active': isSignInActive === 0}">
+          Register
+        </div>
+      </div>
+      <form [formGroup]="signInForm" [ngClass]="{'d-none': isSignInActive === 0}">
+        <div class="form-group">
+          <input type="text" formControlName="email" class="form-control mb-3" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="password" class="form-control mb-3" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="form-control btn btn-submit mb-3" value="Sign in" (click)="signIn()">
+        </div>
+      </form>
+      <form [formGroup]="signUpForm" [ngClass]="{'d-none': isSignInActive === 1}">
+        <div class="form-group">
+          <input type="text" formControlName="username" class="form-control mb-3" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="firstName" class="form-control mb-3" placeholder="First name">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="lastName" class="form-control mb-3" placeholder="Last name">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="email" class="form-control mb-3" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="password" class="form-control mb-3" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="passwordConfirm" class="form-control mb-3"
+            placeholder="Password Confirm">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="form-control btn btn-submit mb-3" value="Sign up" (click)="signUp()">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

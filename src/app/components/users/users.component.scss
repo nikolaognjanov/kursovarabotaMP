@@ -1,0 +1,43 @@
+.navbar {
+    height: 3.5em;
+    background-color: #00031d!important;
+    padding: 0;
+
+    p {
+        color: white;
+    }
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.transparent-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    height: 100%;
+}
+
+.flow-container {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-repeat: round;
+    height: calc(100vh - 3.5em);
+    overflow: scroll;
+
+    .list-group {
+        margin-top: 3.5em;
+    }
+
+    .list-group-item {
+        border-radius: 0!important;
+    }
+
+    .active {
+        background-color: green;
+    }
+}
+

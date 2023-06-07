@@ -1,0 +1,33 @@
+.flow-container {
+    height: 100vh;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 1em;
+    padding-top: 2em;
+    margin: auto 1em;
+    background: white;
+    border-radius: 1em;
+}
+
+.picker-item {
+    height: 2em;
+}
+
+.active {
+    background: #00000f;
+    color: white;
+}
+
+.btn-submit {
+    background: #00000f;
+    color: white;
+}
+
+@media only screen and(min-width: 550px) {
+    .form-wrapper {
+        margin: auto;
+    }
+}

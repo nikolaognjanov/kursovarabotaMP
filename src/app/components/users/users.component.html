@@ -1,0 +1,13 @@
+<nav class="navbar fixed-top navbar-light bg-light">
+  <p class="ml-2 mt-3">Select user for chat:</p>
+  <div class="float-right h-100 d-inline-block">
+    <button class="btn btn-primary transparent-button" (click)="logout()">Logout</button>
+  </div>
+</nav>
+<div class="flow-container">
+  <ul class="list-group">
+    <li *ngFor="let user of users" class="list-group-item" routerLink='/chat/{{user.email}}'>
+      {{user.firstName}} {{user.lastName}}
+    </li>
+  </ul>
+</div>
